@@ -44,6 +44,7 @@ export const usePostsStore = defineStore('posts', (): PostsStore => {
             return;
         }
         isLoading.value = true;
+        error.value = null;
         getPosts(postTitle)
             .then((newPosts) => {
                 if (!title) {
